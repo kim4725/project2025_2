@@ -1,0 +1,116 @@
+/* 전역 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+}
+
+/* 헤더 스타일 */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 장르 네비게이션 */
+.genre-nav {
+    display: flex;
+    overflow-x: auto;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.genre-nav a {
+    flex-shrink: 0;
+    padding: 1.5rem 2.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.genre-nav a.active {
+    background: #4CAF50;
+    color: white;
+    border-bottom: 4px solid #2e7d32;
+    border-radius: 4px 4px 0 0;
+}
+
+.genre-nav a:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+/* 장르 섹션 */
+.genre-section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.genre-section h2 {
+    margin-bottom: 2rem;
+    color: #4CAF50;
+    border-left: 4px solid #4CAF50;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+}
+
+/* 사이트 카드 */
+.site-card {
+    background: white;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #4CAF50;
+}
+
+.site-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.site-card a {
+    color: #2980b9;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.site-card a:hover {
+    text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .genre-nav {
+        flex-direction: column;
+    }
+    
+    .genre-nav a {
+        padding: 1.2rem;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin: 0.5rem;
+    }
+    
+    .site-card {
+        padding: 1.5rem;
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
+}
